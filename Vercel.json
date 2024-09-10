@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "price.ts": {
+    "price.js": {
       "runtime": "nodejs18.x",
       "includeFiles": "node_modules/**"
     }
