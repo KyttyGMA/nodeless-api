@@ -39,10 +39,9 @@ module.exports = async (req, res) => {
 
     // Asegúrate de obtener el precio en USD
     const goldPriceUSD = data.price;
-
-    // Calcula cuántas mandarinas se pueden comprar
-    const mandarinsCanBuy = goldPriceUSD / MANDARIN_PRICE_USD;
-    res.status(200).send(mandarinsCanBuy.toString()); // Asegúrate de enviar como cadena
+    // Calcula cuántas mandarinas se pueden comprar y redondea a dos decimales
+    const mandarinsCanBuy = (goldPriceUSD / MANDARIN_PRICE_USD).toFixed(2);
+    res.status(200).send(mandarinsCanBuy); // Enviar el número redondeado como cadena
   } catch (error) {
     // Maneja errores
     res.status(500).json({ error: 'Error fetching gold price' });
