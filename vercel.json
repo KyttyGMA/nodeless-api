@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "price.js": {
-      "runtime": "nodejs20.17.0",
+      "runtime": "nodejs@20.17.0",
       "includeFiles": "node_modules/**"
     }
   }
