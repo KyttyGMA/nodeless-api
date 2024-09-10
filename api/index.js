@@ -31,9 +31,7 @@ module.exports = async (req, res) => {
 
     // Calcula cuántas mandarinas se pueden comprar
     const mandarinsCanBuy = goldPriceUSD / MANDARIN_PRICE_USD;
-
-    // Responde con el resultado
-    res.status(200).json({ mandarinsCanBuy });
+    res.status(200).send(mandarinsCanBuy);
   } catch (error) {
     // Maneja errores
     res.status(500).json({ error: 'Error fetching gold price' });
