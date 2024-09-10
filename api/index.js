@@ -1,7 +1,7 @@
-const http = require('http');
+const http = require('https');
 
 const MANDARIN_PRICE_USD = 0.33;
-const GOLD_API_URL = 'http://api.gold-api.com/price/XAU';
+const GOLD_API_URL = 'https://api.gold-api.com/price/XAU';
 
 module.exports = async (req, res) => {
   try {
